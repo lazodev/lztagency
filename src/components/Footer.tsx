@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         {/* Direitos Autorais */}
         <div className="text-center mt-8">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Minha Agência Digital. Todos os direitos reservados.
+            © {new Date().getFullYear()} Lzt Digital Agency. Todos os direitos reservados.
           </p>
         </div>
       </div>
