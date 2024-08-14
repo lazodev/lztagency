@@ -18,27 +18,27 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">Links Úteis</h3>
             <ul>
               <li className="mb-2">
-                <a href="#portfolio" className="text-gray-400 hover:text-white">
+                <a href="/portfolio" className="text-gray-400 hover:text-white">
                   Portfólio
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#about" className="text-gray-400 hover:text-white">
+                <a href="/about" className="text-gray-400 hover:text-white">
                   Sobre Nós
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#contact" className="text-gray-400 hover:text-white">
+                <a href="/contact" className="text-gray-400 hover:text-white">
                   Contato
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#prices" className="text-gray-400 hover:text-white">
+                <a href="/pricing" className="text-gray-400 hover:text-white">
                   Preços
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#blog" className="text-gray-400 hover:text-white">
+                <a href="blog" className="text-gray-400 hover:text-white">
                   Blog
                 </a>
               </li>
@@ -71,17 +71,17 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">Jurídico</h3>
             <ul>
               <li className="mb-2">
-                <a href="#privacy-policy" className="text-gray-400 hover:text-white">
+                <a href="/privacy-policy" className="text-gray-400 hover:text-white">
                   Política de Privacidade
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#terms-of-use" className="text-gray-400 hover:text-white">
+                <a href="/terms-of-use" className="text-gray-400 hover:text-white">
                   Termos de Uso
                 </a>
               </li>
               <li className="mb-2">
-                <a href="#cookies-policy" className="text-gray-400 hover:text-white">
+                <a href="/cookies-policy" className="text-gray-400 hover:text-white">
                   Política de Cookies
                 </a>
               </li>

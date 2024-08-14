@@ -32,24 +32,24 @@ const Header: React.FC = () => {
           <img src={logo} alt="Logo" className="h-8 w-auto" />
         </div>
 
-        {/* Menu */}
-        <nav className="hidden md:flex space-x-8">
-          <a href="#portfolio" className="hover:text-gray-300">
-            Portfolio
-          </a>
-          <a href="#about" className="hover:text-gray-300">
-            Sobre
-          </a>
-          <a href="#contact" className="hover:text-gray-300">
-            Contato
-          </a>
-          <a href="#pricing" className="hover:text-gray-300">
-            Preços
-          </a>
-          <a href="#blog" className="hover:text-gray-300">
-            Blog
-          </a>
-        </nav>
+          {/* Menu */}
+          <nav className="hidden md:flex space-x-8">
+            <a href="/portfolio" className="hover:text-gray-300">
+              Portfolio
+            </a>
+            <a href="/about" className="hover:text-gray-300">
+              Sobre
+            </a>
+            <a href="/contact" className="hover:text-gray-300">
+              Contato
+            </a>
+            <a href="pricing" className="hover:text-gray-300">
+              Preços
+            </a>
+            <a href="/blog" className="hover:text-gray-300">
+              Blog
+            </a>
+          </nav>
 
         {/* CTA */}
         <div className="hidden md:block">
@@ -92,16 +92,16 @@ const Header: React.FC = () => {
             <a href="#portfolio" className="hover:text-gray-300">
               Portfolio
             </a>
-            <a href="#about" className="hover:text-gray-300">
+            <a href="/about" className="hover:text-gray-300">
               Sobre
             </a>
-            <a href="#contact" className="hover:text-gray-300">
+            <a href="/contact" className="hover:text-gray-300">
               Contato
             </a>
-            <a href="#pricing" className="hover:text-gray-300">
+            <a href="pricing" className="hover:text-gray-300">
               Preços
             </a>
-            <a href="#blog" className="hover:text-gray-300">
+            <a href="/blog" className="hover:text-gray-300">
               Blog
             </a>
             <a
