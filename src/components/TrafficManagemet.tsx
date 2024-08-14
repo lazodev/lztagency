@@ -8,20 +8,20 @@ const TrafficManagement: React.FC = () => {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
+      preserveAspectRatio: 'xMidYMid slice',
+    },
   };
 
   return (
-    <section className="bg-gray-100 py-16 px-4 md:px-8">
+    <section className="bg-white py-16 px-4 md:px-8">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         {/* Lado Esquerdo - Animação Lottie */}
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 flex justify-center md:justify-start">
           <Lottie options={defaultOptions} height={300} width={300} />
         </div>
 
         {/* Lado Direito - Título e Subtítulo */}
-        <div className="md:w-1/2 mt-10 md:mt-0">
+        <div className="md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
             Gestão de Tráfego Eficaz para Aumentar Suas Conversões
           </h2>

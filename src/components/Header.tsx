@@ -89,7 +89,7 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-gray-900 text-white">
           <nav className="flex flex-col space-y-2 p-4">
-            <a href="#portfolio" className="hover:text-gray-300">
+            <a href="/portfolio" className="hover:text-gray-300">
               Portfolio
             </a>
             <a href="/about" className="hover:text-gray-300">

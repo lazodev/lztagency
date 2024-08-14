@@ -1,8 +1,12 @@
 import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const TermsOfUse: React.FC = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div>
+      <Header />
+    <div className="bg-gray-100 min-h-screen mt-16">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Termos de Uso</h1>
 
@@ -57,6 +61,8 @@ const TermsOfUse: React.FC = () => {
           </p>
         </section>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 };
