@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import GoogleTagManager from './GoogleTagManager';
+import GoogleTagManager from './components/GoogleTagManager';
 import reportWebVitals from './reportWebVitals';
 
 const GTM_ID = 'GTM-THKNQX4S';
