@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PlayIcon } from '@heroicons/react/24/solid';
-import lottie from 'lottie-web';
 import Modal from './Modal';
+import lottie from 'lottie-web';
+import animationData from '../assets/1723491656747.json';
 
 const Hero: React.FC = () => {
   const animationContainer = useRef<HTMLDivElement>(null);
@@ -9,13 +10,16 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     if (animationContainer.current) {
-      lottie.loadAnimation({
+      const animation = lottie.loadAnimation({
         container: animationContainer.current, 
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '/assets/1723491656747.json', 
+        animationData: animationData, // Usando o import do arquivo JSON
       });
+
+      // Cleanup function to stop animation on unmount
+      return () => animation.destroy();
     }
   }, []);
 
