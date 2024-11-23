@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PlayIcon } from '@heroicons/react/24/solid';
 import lottie from 'lottie-web';
-import Modal from './Modal'; // Certifique-se de que o componente Modal está sendo importado corretamente
+import Modal from './Modal';
 
 const Hero: React.FC = () => {
   const animationContainer = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'https://lottie.host/7c653b9a-5f40-41bd-a873-ff6440d640bd/ajHAaenscb.json', 
+        path: '/assets/1723491656747.json', 
       });
     }
   }, []);
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
               Ver Vídeo
             </button>
             <a
-              href="/solicitar-orcamento"
+              href="https://wa.me/5588992086636"
               className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-md"
             >
               Solicitar Orçamento
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
-        videoUrl="https://www.youtube.com/embed/lg6uvLNv8zE?si=0RS9whDyi_JnnmUm"
+        videoUrl="https://www.youtube.com/channel/UCPzVqY5y_fG8jwKznE1zf8g"
       />
     </section>
   );
