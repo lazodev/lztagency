@@ -5,21 +5,37 @@ import lottie from 'lottie-web';
 import animationData from '../assets/1723491656747.json';
 
 const Hero: React.FC = () => {
-  const animationContainer = useRef<HTMLDivElement>(null);
+  const smallAnimationContainer = useRef<HTMLDivElement>(null); // Contêiner para telas menores
+  const largeAnimationContainer = useRef<HTMLDivElement>(null); // Contêiner para telas maiores
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    if (animationContainer.current) {
-      const animation = lottie.loadAnimation({
-        container: animationContainer.current, 
+    // Animação para telas menores
+    if (smallAnimationContainer.current) {
+      const smallAnimation = lottie.loadAnimation({
+        container: smallAnimationContainer.current,
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        animationData: animationData, // Usando o import do arquivo JSON
+        animationData: animationData,
       });
 
-      // Cleanup function to stop animation on unmount
-      return () => animation.destroy();
+      // Cleanup para animação pequena
+      return () => smallAnimation.destroy();
+    }
+
+    // Animação para telas grandes
+    if (largeAnimationContainer.current) {
+      const largeAnimation = lottie.loadAnimation({
+        container: largeAnimationContainer.current,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+      });
+
+      // Cleanup para animação grande
+      return () => largeAnimation.destroy();
     }
   }, []);
 
@@ -33,7 +49,7 @@ const Hero: React.FC = () => {
         <div className="md:hidden w-full relative mb-8">
           <div
             className="w-full h-full"
-            ref={animationContainer}
+            ref={smallAnimationContainer}
             style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
           ></div>
         </div>
@@ -67,7 +83,7 @@ const Hero: React.FC = () => {
         <div className="hidden md:block md:w-1/2 mt-10 md:mt-0 relative h-96 overflow-hidden">
           <div
             className="w-full h-full"
-            ref={animationContainer}
+            ref={largeAnimationContainer}
             style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
           ></div>
         </div>
