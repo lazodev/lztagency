@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
     <section className="bg-gray-900 text-white relative overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center py-16 px-4 md:px-8">
         {/* Lado Esquerdo - Animação Lottie em telas menores */}
-        <div className="md:hidden w-full h-80 relative mb-8">
+        <div className="md:hidden w-full relative mb-8">
           <div
             className="w-full h-full"
             ref={animationContainer}
