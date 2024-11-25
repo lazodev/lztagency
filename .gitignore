@@ -12,6 +12,10 @@
 /build
 
 /.next
+.vscode/
+.cache/
+
+*.log
 
 # misc
 .DS_Store
