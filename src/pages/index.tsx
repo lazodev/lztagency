@@ -6,6 +6,7 @@ import BotsAutomations from '../components/BotsAutomations';
 import WebSites from '../components/WebSites';
 import SocialProofCarousel from '../components/SocialProofCarousel';
 import Seo from '../components/Seo';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const Home: React.FC = () => {
   const structuredData = {
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
         structuredData={structuredData}
       />
         <main>
+          <SpeedInsights />
           <Hero />
           <TrafficManagement />
           <BotsAutomations />

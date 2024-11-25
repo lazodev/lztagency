@@ -1,18 +1,23 @@
 import React, { useEffect, useRef } from 'react';
-import lottie, { AnimationItem } from 'lottie-web';
+import type { AnimationItem } from 'lottie-web';
 
 const BotsAutomations: React.FC = () => {
   const animationContainer = useRef<HTMLDivElement>(null);
   const animationInstance = useRef<AnimationItem | null>(null);
 
   useEffect(() => {
-    if (animationContainer.current && !animationInstance.current) {
-      animationInstance.current = lottie.loadAnimation({
-        container: animationContainer.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'https://lottie.host/69d1bb7f-fa10-4e4a-8837-00ce291786c8/5isXFYKXa7.json',
+    // Verifica se o código está sendo executado no cliente (browser)
+    if (typeof window !== 'undefined') {
+      import('lottie-web').then((lottie) => {
+        if (animationContainer.current && !animationInstance.current) {
+          animationInstance.current = lottie.default.loadAnimation({
+            container: animationContainer.current,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://lottie.host/69d1bb7f-fa10-4e4a-8837-00ce291786c8/5isXFYKXa7.json',
+          });
+        }
       });
     }
 
