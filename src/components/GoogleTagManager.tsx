@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
+import Head from 'next/head';
 
-const GoogleTagManager: React.FC<{ gtmId: string }> = ({ gtmId }) => {
+interface GoogleTagManagerProps {
+  gtmId: string;
+}
+
+const GoogleTagManager: React.FC<GoogleTagManagerProps> = ({ gtmId }) => {
   useEffect(() => {
     // Adicionar o script personalizado no cabeçalho
     const script = document.createElement('script');
@@ -31,9 +36,21 @@ const GoogleTagManager: React.FC<{ gtmId: string }> = ({ gtmId }) => {
               height="0" width="0" style="display:none;visibility:hidden"></iframe>
     `;
     document.body.appendChild(noscript);
+
   }, [gtmId]);
 
-  return null;
+  return (
+    <Head>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=${gtmId}"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
+    </Head>
+  );
 };
 
 export default GoogleTagManager;

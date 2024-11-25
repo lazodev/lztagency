@@ -23,7 +23,7 @@ const TrafficManagement: React.FC = () => {
         {/* Lado Direito - Título e Subtítulo */}
         <div className="md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-            Gestão de Tráfego Eficaz para Aumentar Suas Conversões
+            Gestão de tráfego eficaz para aumentar suas conversões
           </h2>
           <p className="mt-4 text-lg md:text-xl text-gray-600">
             Otimizamos campanhas para alcançar o público certo, no momento certo, garantindo o melhor retorno sobre o investimento.

@@ -37,7 +37,7 @@ const WebSites: React.FC = () => {
         {/* Lado Direito - Título, Subtítulo e Botão */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Desenvolvimento de Sites, Lojas Virtuais e Páginas de Vendas
+            Desenvolvimento de sites, lojas virtuais e páginas de vendas
           </h2>
           <p className="mt-4 text-lg md:text-xl">
             Criação de plataformas digitais personalizadas para alavancar o seu negócio, com design responsivo e otimizado para conversões.

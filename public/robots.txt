@@ -3,6 +3,7 @@
 # Bloquear todos os bots de acessar a página de checkout
 User-agent: *
 Disallow: /checkout
+Disallow: /api/contact
 
 # Permitir o acesso completo ao restante do site
 User-agent: *
@@ -16,8 +17,10 @@ Disallow: /cart
 # Bloquear o acesso ao diretório de administração (se aplicável)
 Disallow: /admin/
 
+Disallow: /api/*
+
 # Sitemap - é importante informar o local do arquivo sitemap.xml para facilitar o rastreamento
-Sitemap: https://www.exemplo.com/sitemap.xml
+Sitemap: https://www.lazotec.com/sitemap.xml
 
 # Caso deseje bloquear bots específicos, por exemplo, o Googlebot
 User-agent: Googlebot

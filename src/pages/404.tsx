@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router'; // Usando o useRouter do Next.js
 import Lottie from 'lottie-react';
 import animationData from '../assets/404.json';
 
 const NotFound: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/');
-    }, 7000); // Redireciona após 7 segundos
+      router.push('/'); // Redireciona para a página inicial após 5 segundos
+    }, 5000);
 
-    return () => clearTimeout(timer); // Limpa o timer caso o componente seja desmontado
-  }, [navigate]);
+    return () => clearTimeout(timer); // Limpa o timer se o componente for desmontado
+  }, [router]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800">

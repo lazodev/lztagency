@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const TermsOfUse: React.FC = () => {
   return (
     <div>
-      <Header />
+
     <div className="bg-gray-100 min-h-screen mt-16">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Termos de Uso</h1>
@@ -54,15 +52,14 @@ const TermsOfUse: React.FC = () => {
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">7. Contato</h2>
           <p className="text-gray-700 mb-6">
             Se você tiver dúvidas sobre nossos termos de uso, entre em contato conosco em{' '}
-            <a href="mailto:contato@suaagencia.com" className="text-blue-600 hover:underline">
-              contato@suaagencia.com
+            <a href="mailto:juridico@lazotec.com" className="text-blue-600 hover:underline">
+              juridico@lazotec.com
             </a>
             .
           </p>
         </section>
       </div>
     </div>
-    <Footer />
     </div>
   );
 };

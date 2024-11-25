@@ -1,16 +1,13 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const CookiePolicy: React.FC = () => {
   return (
     <div>
-      <Header />
     <div className="container mx-auto px-4 py-8 mt-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Política de Cookies</h1>
       
       <p className="text-lg text-gray-700 mb-4">
-        Esta Política de Cookies explica como a [Nome da Agência] utiliza cookies e tecnologias semelhantes para reconhecer você quando visita nosso site. Ela explica o que são essas tecnologias, por que as utilizamos, e seus direitos de controlar o uso delas.
+        Esta Política de Cookies explica como a Lazotec utiliza cookies e tecnologias semelhantes para reconhecer você quando visita nosso site. Ela explica o que são essas tecnologias, por que as utilizamos, e seus direitos de controlar o uso delas.
       </p>
 
       <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. O que são cookies?</h2>
@@ -52,14 +49,13 @@ const CookiePolicy: React.FC = () => {
 
       <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">6. Contato</h2>
       <p className="text-lg text-gray-700 mb-4">
-        Se você tiver alguma dúvida sobre o uso de cookies ou sobre esta Política de Cookies, entre em contato conosco através do e-mail [seu-email@agencia.com].
+        Se você tiver alguma dúvida sobre o uso de cookies ou sobre esta Política de Cookies, entre em contato conosco através do e-mail juridico@lazotec.com.
       </p>
 
       <p className="text-lg text-gray-700 mt-8">
-        Esta política de cookies foi atualizada pela última vez em [Data].
+        Esta política de cookies foi atualizada pela última vez em 24/11/2024.
       </p>
     </div>
-      <Footer />
     </div>
   );
 };

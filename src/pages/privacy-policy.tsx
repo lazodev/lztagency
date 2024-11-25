@@ -1,17 +1,14 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const PrivacyPolicy: React.FC = () => {
   return (
     <div>
-      <Header />
       {/* Adiciona um espaçamento superior para evitar sobreposição do Header */}
       <div className="container mx-auto px-4 py-8 mt-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Política de Privacidade</h1>
         
         <p className="text-lg text-gray-700 mb-4">
-          A Lzt Digital Agency valoriza a privacidade dos seus clientes e visitantes. Esta política de privacidade descreve como coletamos, usamos e protegemos suas informações pessoais.
+          A Lazotec Digital Agency LTDA valoriza a privacidade dos seus clientes e visitantes. Esta política de privacidade descreve como coletamos, usamos e protegemos suas informações pessoais.
         </p>
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. Coleta de Informações</h2>
@@ -51,14 +48,13 @@ const PrivacyPolicy: React.FC = () => {
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">8. Contato</h2>
         <p className="text-lg text-gray-700 mb-4">
-          Se você tiver alguma dúvida sobre esta política de privacidade ou sobre como tratamos suas informações pessoais, entre em contato conosco através do e-mail [seu-email@agencia.com] ou pelo telefone [seu-telefone].
+          Se você tiver alguma dúvida sobre esta política de privacidade ou sobre como tratamos suas informações pessoais, entre em contato conosco através do e-mail juridico@lazotec.com ou pelo telefone +5588992086636.
         </p>
 
         <p className="text-lg text-gray-700 mt-8">
           Esta política de privacidade foi atualizada pela última vez em 14/08/2024.
         </p>
       </div>
-      <Footer />
     </div>
   );
 };

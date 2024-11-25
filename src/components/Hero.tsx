@@ -1,100 +1,71 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { PlayIcon } from '@heroicons/react/24/solid';
-import Modal from './Modal';
-import lottie from 'lottie-web';
-import animationData from '../assets/1723491656747.json';
+import React, { useState } from 'react';
 
 const Hero: React.FC = () => {
-  const smallAnimationContainer = useRef<HTMLDivElement>(null); // Contêiner para telas menores
-  const largeAnimationContainer = useRef<HTMLDivElement>(null); // Contêiner para telas maiores
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-  useEffect(() => {
-    // Animação para telas menores
-    if (smallAnimationContainer.current) {
-      const smallAnimation = lottie.loadAnimation({
-        container: smallAnimationContainer.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-      });
-
-      // Cleanup para animação pequena
-      return () => smallAnimation.destroy();
-    }
-
-    // Animação para telas grandes
-    if (largeAnimationContainer.current) {
-      const largeAnimation = lottie.loadAnimation({
-        container: largeAnimationContainer.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-      });
-
-      // Cleanup para animação grande
-      return () => largeAnimation.destroy();
-    }
-  }, []);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const handlePlayVideo = () => {
+    setIsVideoPlaying(true);
+  };
 
   return (
-    <section className="bg-gray-900 text-white relative overflow-hidden">
-      <div className="container mx-auto flex flex-col md:flex-row items-center py-16 px-4 md:px-8">
-        {/* Lado Esquerdo - Animação Lottie em telas menores */}
-        <div className="md:hidden w-full relative mb-8">
-          <div
-            className="w-full h-full"
-            ref={smallAnimationContainer}
-            style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
-          ></div>
-        </div>
-
-        {/* Lado Esquerdo - Título, Subtítulo e CTAs */}
-        <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
-            Transforme Suas Ideias em Realidade Digital
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-200">
-            Ajudamos sua empresa a crescer através de estratégias digitais inovadoras e personalizadas.
-          </p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-4">
-            <button
-              onClick={openModal}
-              className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
+    <section className="bg-gray-900 text-white relative overflow-hidden h-screen flex flex-col justify-center">
+      <div className="container mx-auto flex flex-col items-center justify-center h-full px-4 md:px-8 pt-16">
+        {/* Headline Persuasiva */}
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-center">
+          Transforme suas ideias em realidade digital
+        </h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-200 text-center">
+          Ajudamos sua empresa a crescer através de estratégias digitais inovadoras e personalizadas.
+        </p>
+        
+        {/* Capa do Vídeo */}
+        <div
+          className="mt-8 w-full max-w-[900px] h-[500px] relative cursor-pointer"
+          onClick={handlePlayVideo}
+        >
+          {!isVideoPlaying ? (
+            <div
+              className="w-full h-full bg-cover bg-center"
+              style={{ backgroundImage: "url('../assets/banner-capa-youtube.png')" }}
             >
-              <PlayIcon className="w-6 h-6 mr-2" />
-              Ver Vídeo
-            </button>
-            <a
-              href="https://wa.me/5588992086636"
-              className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-md"
-            >
-              Solicitar Orçamento
-            </a>
-          </div>
+              <div className="absolute inset-0 flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-16 w-16 text-white animate-pulse"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M14.828 9.172a4 4 0 010 5.656l-6.364 6.364a4 4 0 01-5.656-5.656l6.364-6.364a4 4 0 015.656 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+          ) : (
+            <iframe
+              className="w-full h-full object-cover"
+              src="https://www.youtube.com/embed/bgUbl6nNLOI?autoplay=1"
+              title="Apresentação da Agência Lazotec Digital"
+              style={{ border: 'none' }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          )}
         </div>
-
-        {/* Lado Direito - Animação Lottie em telas maiores */}
-        <div className="hidden md:block md:w-1/2 mt-10 md:mt-0 relative h-96 overflow-hidden">
-          <div
-            className="w-full h-full"
-            ref={largeAnimationContainer}
-            style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
-          ></div>
+        
+        {/* Botão CTA pulsante */}
+        <div className="mt-8 flex justify-center">
+          <button
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+          >
+            Quero uma consultoria
+          </button>
         </div>
       </div>
-
-      {/* Modal */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        videoUrl="https://www.youtube.com/channel/UCPzVqY5y_fG8jwKznE1zf8g"
-      />
     </section>
   );
 };

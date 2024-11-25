@@ -30,7 +30,7 @@ const BotsAutomations: React.FC = () => {
         {/* Lado Esquerdo - Título, Subtítulo e Botão */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-            Desenvolvimento de Bots Inteligentes
+            Desenvolvimento de bots inteligentes
           </h2>
           <p className="mt-4 text-lg md:text-xl">
             Automação personalizada com bots inteligentes para otimizar o atendimento e melhorar a eficiência da sua empresa.
