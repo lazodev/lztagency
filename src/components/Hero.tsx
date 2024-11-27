@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
     <section className="bg-gray-900 text-white relative overflow-hidden h-screen flex flex-col justify-center pb-12">
       <div className="container mx-auto flex flex-col items-center justify-center h-full px-4 md:px-8 pt-16">
         {/* Headline Persuasiva */}
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-center">
+        <h1 className="mt-6 text-2xl md:text-4xl font-bold leading-tight text-center">
           Transforme suas ideias em realidade digital
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-200 text-center">
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             rel="noopener noreferrer"
           >
             <button
-              className="px-6 py-3 bg-blue-600 border-2 border-blue-600 hover:bg-blue-700 text-white rounded-md transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:border-blue-700"
+              className="px-6 py-3 bg-blue-600 border-2 border-blue-600 hover:bg-blue-700 text-white rounded-md transform transition-all duration-150 ease-in-out hover:scale-105 hover:shadow-lg hover:border-blue-700"
             >
               Quero uma consultoria grátis
             </button>

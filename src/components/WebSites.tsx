@@ -28,7 +28,7 @@ const WebSites: React.FC = () => {
       }
     };
   }, []);
-  
+
   return (
     <section className="bg-white text-gray-800 py-16 min-h-[700px] flex items-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
@@ -49,7 +49,7 @@ const WebSites: React.FC = () => {
           </p>
           <a
             href="https://api.whatsapp.com/send?phone=5588999074499&text=Ol%C3%A1,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os!"
-            className="mt-6 inline-block px-8 py-4 bg-indigo-500 hover:bg-indigo-700 text-white text-lg md:text-xl font-semibold rounded-md"
+            className="mt-4 inline-block px-8 py-4 bg-indigo-500 hover:bg-indigo-700 text-white text-lg md:text-xl font-semibold rounded-md"
             target="_blank"
             rel="noopener noreferrer"
           >
