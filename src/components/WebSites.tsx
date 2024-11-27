@@ -25,26 +25,31 @@ const WebSites: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-white text-gray-800 py-16">
+    <section className="bg-white text-gray-800 py-16 min-h-[700px] flex items-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
         {/* Lado Esquerdo - Animação Lottie */}
-        <div className="md:w-1/2 flex justify-center md:justify-start">
+        <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
           <div className="w-full h-full max-w-xs md:max-w-md" ref={animationContainer}>
             {/* Animação Lottie */}
           </div>
         </div>
 
         {/* Lado Direito - Título, Subtítulo e Botão */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+        <div className="md:w-1/2 text-center md:text-left">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
             Desenvolvimento de sites, lojas virtuais e páginas de vendas
           </h2>
-          <p className="mt-4 text-lg md:text-xl">
+          <p className="mt-4 text-xl md:text-2xl">
             Criação de plataformas digitais personalizadas para alavancar o seu negócio, com design responsivo e otimizado para conversões.
           </p>
-          <button className="mt-6 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-md">
+          <a
+            href="https://api.whatsapp.com/send?phone=5588999074499&text=Ol%C3%A1,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os!"
+            className="mt-6 inline-block px-8 py-4 bg-indigo-500 hover:bg-indigo-700 text-white text-lg md:text-xl font-semibold rounded-md"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Saiba Mais
-          </button>
+          </a>
         </div>
       </div>
     </section>

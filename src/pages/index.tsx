@@ -7,6 +7,10 @@ import WebSites from '../components/WebSites';
 import SocialProofCarousel from '../components/SocialProofCarousel';
 import Seo from '../components/Seo';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Button from '../components/Button';
+import Newsletter from '@/components/Newsletter';
+import BentoGrid from '../components/BentoGrid'
+import Example from '@/components/Example';
 
 const Home: React.FC = () => {
   const structuredData = {
@@ -36,11 +40,13 @@ const Home: React.FC = () => {
         <main>
           <SpeedInsights />
           <Hero />
+          <BentoGrid />
           <TrafficManagement />
           <BotsAutomations />
           <WebSites />
           <SocialProofCarousel />
           <FAQItem />
+          <Newsletter />
         </main>
     </div>
   );

@@ -10,7 +10,6 @@ export const getAllPages = async (): Promise<string[]> => {
       '/customer-area',
       '/resources',
       '/testimonials',
-      '/checkout',
       '/cookies-policy',
       '/privacy-policy',
       '/terms-of-use',

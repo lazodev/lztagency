@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Lazotec Digital Agency",
+  "name": "Lazotec Digital Agency - Desenvolvimento Web",
+  "description": "Agência digital Lazotec especializada em desenvolvimento de sites, lojas online, automações com bots inteligentes, blogs e gestão de tráfego.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,10 +17,18 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "logo1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0057A4",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR"
 }

@@ -1,8 +1,16 @@
-import React from 'react';
-import Lottie from 'react-lottie';
-import * as animationData from '../assets/traffic-management.json'; // Certifique-se de ter o arquivo Lottie
+import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
+import * as animationData from '../assets/traffic-management.json';
 
 const TrafficManagement: React.FC = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -12,25 +20,34 @@ const TrafficManagement: React.FC = () => {
     },
   };
 
+  if (!isClient) {
+    return null;
+  }
+
   return (
-    <section className="bg-white py-16 px-4 md:px-8">
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
+    <section className="bg-white py-16 min-h-[700px] flex items-center">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
         {/* Lado Esquerdo - Animação Lottie */}
-        <div className="md:w-1/2 flex justify-center md:justify-start">
+        <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
           <Lottie options={defaultOptions} height={300} width={300} />
         </div>
 
         {/* Lado Direito - Título e Subtítulo */}
-        <div className="md:w-1/2 mt-10 md:mt-0 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+        <div className="md:w-1/2 text-center md:text-left">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
             Gestão de tráfego eficaz para aumentar suas conversões
           </h2>
-          <p className="mt-4 text-lg md:text-xl text-gray-600">
+          <p className="mt-4 text-xl md:text-2xl text-gray-600">
             Otimizamos campanhas para alcançar o público certo, no momento certo, garantindo o melhor retorno sobre o investimento.
           </p>
-          <button className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md">
+          <a
+            href="https://api.whatsapp.com/send?phone=5588999074499&text=Ol%C3%A1,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os!"
+            className="mt-6 inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg md:text-xl font-semibold rounded-md"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Saiba Mais
-          </button>
+          </a>
         </div>
       </div>
     </section>

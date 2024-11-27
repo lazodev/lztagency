@@ -1,38 +1,139 @@
-# https://www.robotstxt.org/robotstxt.html
-
-# Bloquear todos os bots de acessar a página de checkout
+# Bloquear todos os bots de acessar páginas privadas, checkout, login, admin, API
 User-agent: *
-Disallow: /checkout
-Disallow: /api/contact
+Disallow: /checkout/
+Disallow: /api/
+Disallow: /login
+Disallow: /sign-up
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /client-dashboard/  # Exemplo: Área de andamento de projetos para cliente logado
+Disallow: /client-projects/   # Exemplo: Páginas de projetos específicos
 
-# Permitir o acesso completo ao restante do site
-User-agent: *
+# Permitir o acesso completo ao restante do site, exceto as áreas bloqueadas
 Allow: /
 
-# Bloquear o acesso a páginas de login e de admin
-Disallow: /login
-Disallow: /admin
-Disallow: /cart
+# Permitir o acesso a recursos importantes como imagens, CSS e JS
+Allow: /_next/static/
+Allow: /_next/image/
+Allow: /_next/webpack-hmr/
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
 
-# Bloquear o acesso ao diretório de administração (se aplicável)
-Disallow: /admin/
-
-Disallow: /api/*
-
-# Sitemap - é importante informar o local do arquivo sitemap.xml para facilitar o rastreamento
+# Sitemap - indicando o local do arquivo sitemap.xml para facilitar o rastreamento
 Sitemap: https://www.lazotec.com/sitemap.xml
 
-# Caso deseje bloquear bots específicos, por exemplo, o Googlebot
-User-agent: Googlebot
-Disallow: /checkout
-Disallow: /login
-Disallow: /admin
+# Bloquear bots conhecidos que não são úteis para SEO
+User-agent: Baidu
+Disallow: /
 
-# Bloqueio de bots de mídia social (se necessário, para evitar indexação de URLs não relevantes)
+User-agent: Yandex
+Disallow: /
+
+# Bloqueio de bots não úteis para SEO
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Uptrends
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: Domain Reanalyzer
+Disallow: /
+
+User-agent: Dotbot
+Disallow: /
+
 User-agent: Twitterbot
-Disallow: /checkout
-Disallow: /login
+Disallow: /
 
 User-agent: FacebookExternalHit
-Disallow: /checkout
-Disallow: /login
+Disallow: /
+
+User-agent: Pinterest
+Disallow: /
+
+User-agent: LinkedInBot
+Disallow: /
+
+User-agent: Slackbot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: XoviBot
+Disallow: /
+
+User-agent: SeobilityBot
+Disallow: /
+
+User-agent: Cindy
+Disallow: /
+
+User-agent: Pingdom
+Disallow: /
+
+User-agent: GTmetrix
+Disallow: /
+
+User-agent: Sogou Spider
+Disallow: /
+
+User-agent: Rambler
+Disallow: /
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: TrendictionBot
+Disallow: /
+
+User-agent: Crawler4j
+Disallow: /
+
+User-agent: A1Bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: WebCrawler
+Disallow: /
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: Semalt
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+
+# Permitir o acesso a conteúdo público relevante
+User-agent: *
+Allow: /about/
+Allow: /blog/
+Allow: /contact/
+Allow: /portfolio/
+Allow: /services/
+Allow: /pricing/
+
