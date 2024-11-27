@@ -7,10 +7,8 @@ import WebSites from '../components/WebSites';
 import SocialProofCarousel from '../components/SocialProofCarousel';
 import Seo from '../components/Seo';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import Button from '../components/Button';
 import Newsletter from '@/components/Newsletter';
-import BentoGrid from '../components/BentoGrid'
-import Example from '@/components/Example';
+import BentoGrid from '../components/BentoGrid';
 
 const Home: React.FC = () => {
   const structuredData = {

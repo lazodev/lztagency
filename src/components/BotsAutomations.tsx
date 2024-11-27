@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import lottie, { AnimationItem } from 'lottie-web';
 import animationData from '../assets/1723615790298.json';
+
+// Carrega o componente Lottie apenas no lado do cliente (SSR: false)
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const BotsAutomations: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
@@ -15,13 +19,18 @@ const BotsAutomations: React.FC = () => {
 
   useEffect(() => {
     if (isClient && animationContainer.current && !animationInstance.current) {
-      animationInstance.current = lottie.loadAnimation({
-        container: animationContainer.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-      });
+      try {
+        animationInstance.current = lottie.loadAnimation({
+          container: animationContainer.current,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          animationData,
+        });
+      } catch (error) {
+        console.error('Erro ao carregar a animação:', error);
+        // Exibir uma mensagem de erro ou uma animação alternativa
+      }
     }
 
     return () => {

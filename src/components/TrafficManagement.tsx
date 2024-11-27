@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import * as animationData from '../assets/traffic-management.json';
 
@@ -6,21 +6,23 @@ import * as animationData from '../assets/traffic-management.json';
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const TrafficManagement: React.FC = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <section className="bg-white py-16 min-h-[700px] flex items-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
         {/* Lado Esquerdo - Animação Lottie */}
         <div className="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
-          <Lottie options={defaultOptions} height={300} width={300} />
+        <div ref={containerRef} style={{ width: '300px', height: '300px' }}>
+            <Lottie options={{
+              loop: true,
+              autoplay: true,
+              animationData,
+              rendererSettings: {
+                preserveAspectRatio: 'xMidYMid slice',
+              },
+            }} />
+          </div>
         </div>
 
         {/* Lado Direito - Título e Subtítulo */}

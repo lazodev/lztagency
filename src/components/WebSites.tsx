@@ -6,26 +6,29 @@ const WebSites: React.FC = () => {
   const animationInstance = useRef<AnimationItem | null>(null);
 
   useEffect(() => {
-    // Verifica se o código está sendo executado no cliente (navegador)
     if (typeof window !== 'undefined' && animationContainer.current && !animationInstance.current) {
-      animationInstance.current = lottie.loadAnimation({
-        container: animationContainer.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'https://lottie.host/5b76a10f-1919-41aa-9df1-54a9ab0938f9/HBEpLmfgH2.json',
-      });
+      try {
+        animationInstance.current = lottie.loadAnimation({
+          container: animationContainer.current,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          path: 'https://lottie.host/5b76a10f-1919-41aa-9df1-54a9ab0938f9/HBEpLmfgH2.json',
+        });
+      } catch (error) {
+        console.error('Erro ao carregar a animação:', error);
+        // Exibir uma mensagem de erro ou uma animação alternativa
+      }
     }
 
     return () => {
-      // Limpeza da animação quando o componente for desmontado
       if (animationInstance.current) {
         animationInstance.current.destroy();
         animationInstance.current = null;
       }
     };
-  }, []); // A dependência vazia garante que o código execute apenas uma vez após o primeiro render
-
+  }, []);
+  
   return (
     <section className="bg-white text-gray-800 py-16 min-h-[700px] flex items-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
