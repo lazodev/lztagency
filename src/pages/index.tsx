@@ -1,9 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import TrafficManagement from '../components/TrafficManagement';
 import FAQItem from '../components/FAQItem';
-import BotsAutomations from '../components/BotsAutomations';
-import WebSites from '../components/WebSites';
 import SocialProofCarousel from '../components/SocialProofCarousel';
 import Seo from '../components/Seo';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -39,9 +36,6 @@ const Home: React.FC = () => {
           <SpeedInsights />
           <Hero />
           <BentoGrid />
-          <TrafficManagement />
-          <BotsAutomations />
-          <WebSites />
           <SocialProofCarousel />
           <FAQItem />
           <Newsletter />
