@@ -6,7 +6,8 @@ const WebSites: React.FC = () => {
   const animationInstance = useRef<AnimationItem | null>(null);
 
   useEffect(() => {
-    if (animationContainer.current && !animationInstance.current) {
+    // Verifica se o código está sendo executado no cliente (navegador)
+    if (typeof window !== 'undefined' && animationContainer.current && !animationInstance.current) {
       animationInstance.current = lottie.loadAnimation({
         container: animationContainer.current,
         renderer: 'svg',
@@ -17,12 +18,13 @@ const WebSites: React.FC = () => {
     }
 
     return () => {
+      // Limpeza da animação quando o componente for desmontado
       if (animationInstance.current) {
         animationInstance.current.destroy();
         animationInstance.current = null;
       }
     };
-  }, []);
+  }, []); // A dependência vazia garante que o código execute apenas uma vez após o primeiro render
 
   return (
     <section className="bg-white text-gray-800 py-16 min-h-[700px] flex items-center">

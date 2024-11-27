@@ -10,16 +10,18 @@ const BotsAutomations: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setIsClient(true);
+    }
+  }, []);
 
-      if (animationContainer.current && !animationInstance.current) {
-        animationInstance.current = lottie.loadAnimation({
-          container: animationContainer.current,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          animationData: animationData,
-        });
-      }
+  useEffect(() => {
+    if (isClient && animationContainer.current && !animationInstance.current) {
+      animationInstance.current = lottie.loadAnimation({
+        container: animationContainer.current,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+      });
     }
 
     return () => {
@@ -28,7 +30,7 @@ const BotsAutomations: React.FC = () => {
         animationInstance.current = null;
       }
     };
-  }, []);
+  }, [isClient]);
 
   if (!isClient) {
     return null;
@@ -37,7 +39,6 @@ const BotsAutomations: React.FC = () => {
   return (
     <section className="bg-gray-100 text-gray-800 py-16 min-h-[700px] flex items-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
-        {/* Lado Esquerdo - Título, Subtítulo e Botão */}
         <div className="md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left mt-8 md:mt-0">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
             Desenvolvimento de bots inteligentes
@@ -54,10 +55,10 @@ const BotsAutomations: React.FC = () => {
             Saiba Mais
           </a>
         </div>
-
-        {/* Lado Direito - Animação Lottie */}
-        <div className="md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
-          <div className="w-full h-full max-w-xs md:max-w-md" ref={animationContainer} />
+        <div className="md:w-1/2 flex justify-center md:justify-end">
+          <div className="w-full h-full max-w-xs md:max-w-md" ref={animationContainer}>
+            {/* Animação Lottie */}
+          </div>
         </div>
       </div>
     </section>

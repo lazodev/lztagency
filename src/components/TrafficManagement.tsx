@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
-
-const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 import * as animationData from '../assets/traffic-management.json';
 
+// Carrega o componente Lottie apenas no lado do cliente (SSR: false)
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
+
 const TrafficManagement: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -19,10 +14,6 @@ const TrafficManagement: React.FC = () => {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
-
-  if (!isClient) {
-    return null;
-  }
 
   return (
     <section className="bg-white py-16 min-h-[700px] flex items-center">
