@@ -103,6 +103,9 @@ const Footer = () => {
               <li className="mb-2">
                 <a href="/refund-policy" className="hover:underline text-gray-600">Política de Reembolso</a>
               </li>
+              <li className="mb-2">
+                <a href="/lgpd" className="hover:underline text-gray-600">Política LGPD</a>
+              </li>
             </ul>
           </div>
         </div>

@@ -4,11 +4,11 @@ const TermsOfUse: React.FC = () => {
   return (
     <div>
 
-    <div className="bg-gray-100 min-h-screen mt-16">
+    <div className= "min-h-screen mt-16">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Termos de Uso</h1>
 
-        <section className="bg-white p-6 rounded-lg shadow-md">
+        <section className="bg-white p-6">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Introdução</h2>
           <p className="text-gray-700 mb-6">
             Bem-vindo à nossa agência digital. Ao acessar e utilizar nossos serviços, você concorda em cumprir e ser
@@ -52,8 +52,8 @@ const TermsOfUse: React.FC = () => {
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">7. Contato</h2>
           <p className="text-gray-700 mb-6">
             Se você tiver dúvidas sobre nossos termos de uso, entre em contato conosco em{' '}
-            <a href="mailto:juridico@lazotec.com" className="text-blue-600 hover:underline">
-              juridico@lazotec.com
+            <a href="mailto:suporte@lazotec.com" className="text-blue-600 hover:underline">
+              suporte@lazotec.com
             </a>
             .
           </p>

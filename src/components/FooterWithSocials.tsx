@@ -10,27 +10,27 @@ const FooterWithSocials = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Informações de Copyright e CNPJ */}
           <div>
-            <p>&copy; {currentYear} Lazotec Empreendimentos Digitais LTDA. Todos os direitos reservados.</p>
+            <p>&copy; {currentYear} Lazotec. Todos os direitos reservados.</p>
             <p>CNPJ: 00.000.000/0000-00</p>
           </div>
           {/* Ícones das Redes Sociais */}
           <div className="flex space-x-4">
-            <a href="https://facebook.com" aria-label="Facebook" className="text-gray-700 hover:text-gray-900">
+            <a href="https://facebook.com/lazotecofc" aria-label="Facebook" className="text-gray-700 hover:text-gray-900">
               <FaFacebook size={24} />
             </a>
-            <a href="https://instagram.com" aria-label="Instagram" className="text-gray-700 hover:text-gray-900">
+            <a href="https://instagram.com/lazotecofc" aria-label="Instagram" className="text-gray-700 hover:text-gray-900">
               <FaInstagram size={24} />
             </a>
-            <a href="https://tiktok.com" aria-label="TikTok" className="text-gray-700 hover:text-gray-900">
+            <a href="https://tiktok.com/lazotecofc" aria-label="TikTok" className="text-gray-700 hover:text-gray-900">
               <FaTiktok size={24} />
             </a>
-            <a href="https://youtube.com" aria-label="YouTube" className="text-gray-700 hover:text-gray-900">
+            <a href="https://youtube.com/c/lazotecofc" aria-label="YouTube" className="text-gray-700 hover:text-gray-900">
               <FaYoutube size={24} />
             </a>
-            <a href="https://x.com" aria-label="X (Twitter)" className="text-gray-700 hover:text-gray-900">
+            <a href="https://x.com/lazotecofc" aria-label="X (Twitter)" className="text-gray-700 hover:text-gray-900">
               <FaTwitter size={24} />
             </a>
-            <a href="https://github.com" aria-label="GitHub" className="text-gray-700 hover:text-gray-900">
+            <a href="https://github.com/lazodev" aria-label="GitHub" className="text-gray-700 hover:text-gray-900">
               <FaGithub size={24} />
             </a>
           </div>

@@ -49,7 +49,7 @@ const CookiePolicy: React.FC = () => {
 
       <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">6. Contato</h2>
       <p className="text-lg text-gray-700 mb-4">
-        Se você tiver alguma dúvida sobre o uso de cookies ou sobre esta Política de Cookies, entre em contato conosco através do e-mail juridico@lazotec.com.
+        Se você tiver alguma dúvida sobre o uso de cookies ou sobre esta Política de Cookies, entre em contato conosco através do e-mail suporte@lazotec.com.
       </p>
 
       <p className="text-lg text-gray-700 mt-8">

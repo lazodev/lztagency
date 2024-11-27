@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             rel="noopener noreferrer"
           >
             <button
-              className="px-6 py-3 bg-blue-600 border-2 border-blue-600 hover:bg-blue-700 text-white rounded-md transform transition-all duration-150 ease-in-out hover:scale-105 hover:shadow-lg hover:border-blue-700"
+              className="px-6 py-3 bg-blue-600 border-2 border-blue-600 hover:bg-blue-700 text-white rounded-md transform transition-all duration-150 ease-in-out hover:scale-105 hover:shadow-lg hover:outline-2 hover:outline-blue-500/50"
             >
               Quero uma consultoria grátis
             </button>

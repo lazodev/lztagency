@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 sm:py-16 lg:py-24">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-8">
-        <div className="mb-12 text-center">
+        <div className="mt-8 mb-12 text-center">
           <h1 className="text-4xl font-extrabold text-gray-900">Fale Conosco</h1>
           <p className="text-lg text-gray-600 mt-4">
             Entre em contato conosco para saber mais sobre como podemos ajudar sua empresa a crescer.
