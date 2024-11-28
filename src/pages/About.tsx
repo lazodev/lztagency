@@ -11,21 +11,23 @@ interface AboutProps {
 
 const About: NextPageWithLayout<AboutProps> = () => {
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <div className="bg-gray-50 text-gray-800 pt-20">
       <Head>
         <title>Sobre Nós - Nossa História</title>
         <meta name="description" content="Conheça mais sobre nossa história, missão, visão e valores." />
       </Head>
 
       {/* Seção de Vídeo */}
-      <div className="relative w-full h-0 pb-[56.25%] mt-8 flex justify-center">
-        <iframe
-          className="absolute top-0 left-0 w-full h-full border-none max-w-4xl"
-          src="https://www.youtube.com/embed/bgUbl6nNLOI?si=vdkYw2avyL0McNI4"
-          title="História da Empresa Lazotec"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+      <div className="flex justify-center">
+        <div className="relative w-full max-w-4xl h-0 pb-[36.25%]">
+          <iframe
+            className="rounded-xl absolute top-0 left-0 w-full h-full border-none shadow-xl"
+            src="https://www.youtube.com/embed/bgUbl6nNLOI?si=vdkYw2avyL0McNI4"
+            title="História da Empresa Lazotec"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       </div>
 
       {/* Seção de História */}
