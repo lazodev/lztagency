@@ -1,21 +1,35 @@
 import React from 'react';
+import { ReactElement } from 'react';
+import DefaultLayout from '@/layouts/DefaultLayout';
+import { NextPageWithLayout } from '@/types/nextPageWithLayout';
+import { GetServerSideProps } from 'next';
+import Head from 'next/head';
 
-const About: React.FC = () => {
+interface AboutProps {
+  // Adicione quaisquer props que você precise buscar no servidor aqui
+}
+
+const About: NextPageWithLayout<AboutProps> = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
+      <Head>
+        <title>Sobre Nós - Nossa História</title>
+        <meta name="description" content="Conheça mais sobre nossa história, missão, visão e valores." />
+      </Head>
+
       {/* Seção de Vídeo */}
-      <div className="relative w-full h-72 md:h-96">
+      <div className="relative w-full h-0 pb-[56.25%] mt-8 flex justify-center">
         <iframe
-          className="w-full h-full absolute top-0 left-0 border-none"
+          className="absolute top-0 left-0 w-full h-full border-none max-w-4xl"
           src="https://www.youtube.com/embed/bgUbl6nNLOI?si=vdkYw2avyL0McNI4"
-          title="Empresa História"
+          title="História da Empresa Lazotec"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
       </div>
 
       {/* Seção de História */}
-      <section className="px-6 py-12 sm:px-8 md:px-12 lg:px-16">
+      <section className="px-6 py-12 sm:px-8 md:px-12 lg:px-16 max-w-screen-xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center mb-6">Nossa História</h1>
         <p className="text-lg text-center mb-12">
           Somos uma empresa com uma história marcada pela inovação e excelência. Desde a nossa fundação, temos buscado transformar ideias em soluções digitais de alta qualidade, ajudando empresas a alcançar seus objetivos de forma eficaz.
@@ -54,6 +68,18 @@ const About: React.FC = () => {
       </section>
     </div>
   );
+};
+
+// Função para buscar dados no servidor
+export const getServerSideProps: GetServerSideProps<AboutProps> = async () => {
+  // Adicione a lógica de busca de dados aqui, se necessário
+  return {
+    props: {}, // Passe os dados necessários como props
+  };
+};
+
+About.getLayout = function getLayout(page: ReactElement) {
+  return <DefaultLayout>{page}</DefaultLayout>;
 };
 
 export default About;
