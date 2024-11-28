@@ -16,7 +16,7 @@ const CustomerArea: NextPageWithLayout<CustomerAreaProps> = ({ data }) => {
         <title>Área de Cliente - Lazotec</title>
         <meta name="description" content="Testemunhos dos clientes da Lazotec." />
       </Head>
-      <main className="p-4">
+      <main className="mt-8 p-4">
         <h1 className="text-3xl font-bold">Área de Cliente</h1>
         <p>{data}</p>
       </main>

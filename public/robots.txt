@@ -6,8 +6,8 @@ Disallow: /login
 Disallow: /sign-up
 Disallow: /admin/
 Disallow: /cart/
-Disallow: /client-dashboard/  # Exemplo: Área de andamento de projetos para cliente logado
-Disallow: /client-projects/   # Exemplo: Páginas de projetos específicos
+Disallow: /customer-area/
+Disallow: /client-projects/
 
 # Permitir o acesso completo ao restante do site, exceto as áreas bloqueadas
 Allow: /
