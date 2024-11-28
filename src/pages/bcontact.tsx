@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
+import DefaultLayout from '@/layouts/DefaultLayout';
+import { NextPageWithLayout } from '@/types/nextPageWithLayout';
+import { ReactElement } from 'react';
+import { GetServerSideProps } from 'next';
+import Head from 'next/head';
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  // Adicione quaisquer props que você precise buscar no servidor aqui
+}
+
+const Contact: NextPageWithLayout<ContactProps> = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,6 +55,10 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 sm:py-16 lg:py-24">
+      <Head>
+        <title>Fale Conosco</title>
+        <meta name="description" content="Entre em contato conosco para saber mais sobre como podemos ajudar sua empresa a crescer." />
+      </Head>
       <div className="max-w-screen-xl mx-auto px-6 sm:px-8">
         <div className="mt-8 mb-12 text-center">
           <h1 className="text-4xl font-extrabold text-gray-900">Fale Conosco</h1>
@@ -140,6 +153,18 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
+};
+
+// Função para buscar dados no servidor
+export const getServerSideProps: GetServerSideProps<ContactProps> = async () => {
+  // Adicione a lógica de busca de dados aqui, se necessário
+  return {
+    props: {}, // Passe os dados necessários como props
+  };
+};
+
+Contact.getLayout = function getLayout(page: ReactElement) {
+  return <DefaultLayout>{page}</DefaultLayout>;
 };
 
 export default Contact;
