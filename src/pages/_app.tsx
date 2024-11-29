@@ -1,11 +1,10 @@
-import { ReactElement, ReactNode} from 'react';
 import { AppProps } from 'next/app';
-import '../assets/global.css';
-import { NextPageWithLayout } from '@/types/nextPageWithLayout';
-import Header from '../components/NavBar';
-import Footer from '../components/Footer';
-import GoogleTagManager from '../components/GoogleTagManager';
-import Seo from '../components/Seo';
+import '@/assets/global.css';
+import { NextPageWithLayout } from '../types/nextPageWithLayout';
+import Header from '@/components/NavBar';
+import Footer from '@/components/Footer';
+import GoogleTagManager from '@/components/GoogleTagManager';
+import Seo from '@/components/Seo';
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;

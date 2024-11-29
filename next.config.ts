@@ -1,8 +1,10 @@
-module.exports = {
+import { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   eslint: {
     // Permite que a construção de produção complete com erros de ESLint
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   webpack(config) {
     // Adiciona suporte para importar arquivos .svg como componentes React
@@ -21,3 +23,5 @@ module.exports = {
     return config;
   },
 };
+
+export default nextConfig;

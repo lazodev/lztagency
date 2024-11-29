@@ -2,7 +2,7 @@
 
 import { GetServerSideProps } from 'next';
 import { SitemapStream, streamToPromise } from 'sitemap';
-import { getAllPages } from '../lib/getPages';
+import { getAllPages } from '@/lib/getPages';
 
 const Sitemap = () => {
   // Este componente não será renderizado, pois o Next.js retornará a resposta do servidor

@@ -1,7 +1,7 @@
 import React from 'react';
-import GoogleAdsLogo from '../../public/assets/google-ads.svg';
-import FacebookLogo from '../../public/assets/facebook.svg';
-import TikTokAdsLogo from '../../public/assets/tiktok-ads-logo.svg';
+import GoogleAdsLogo from '@/assets/google-ads.svg';
+import FacebookLogo from '@/assets/facebook.svg';
+import TikTokAdsLogo from '@/assets/tiktok-ads-logo.svg';
 
 const Button: React.FC = () => {
   

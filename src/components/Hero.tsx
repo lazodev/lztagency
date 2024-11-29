@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         >
           {!isVideoPlaying ? (
             <div
-              className="w-full h-full bg-cover bg-center"
+              className="w-full h-full bg-cover bg-center rounded-2xl"
               style={{ backgroundImage: "url('../assets/banner-capa-youtube.png')" }}
             >
               <div className="absolute inset-0 flex justify-center items-center">
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
             </div>
           ) : (
             <iframe
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-2xl"
               src="https://www.youtube.com/embed/bgUbl6nNLOI?autoplay=1"
               title="Apresentação da Agência Lazotec Digital"
               style={{ border: 'none' }}

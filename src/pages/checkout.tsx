@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { NextPageWithLayout } from '@/types/nextPageWithLayout';
 import SimpleLayout from '@/layouts/SimpleLayout';
-import CheckoutForm from '../components/CheckoutForm';
+import CheckoutForm from '@/components/CheckoutForm';
 
 const Checkout: NextPageWithLayout = () => {
   return (

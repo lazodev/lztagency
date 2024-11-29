@@ -1,6 +1,6 @@
 import React from 'react';
-import MenuFooter from './MenuFooter';
-import FooterWithSocials from './FooterWithSocials';
+import MenuFooter from '@/components/MenuFooter';
+import FooterWithSocials from '@/components/FooterWithSocials';
 
 const Footer: React.FC = () => {
   return (

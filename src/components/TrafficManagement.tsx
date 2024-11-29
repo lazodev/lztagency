@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import dynamic from 'next/dynamic';
-import * as animationData from '../assets/traffic-management.json';
+import * as animationData from '@/assets/traffic-management.json';
 
 // Carrega o componente Lottie apenas no lado do cliente (SSR: false)
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });

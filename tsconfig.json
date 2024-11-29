@@ -1,36 +1,85 @@
 {
   "compilerOptions": {
+    // Define os tipos que o TypeScript deve carregar globalmente
     "types": ["next", "react", "react-dom"],
-    "target": "esnext",
+
+    // Define o alvo da transpilação como ESNext (versão mais recente do ECMAScript)
+    "target": "ESNext",
+
+    // Define as bibliotecas que o TypeScript deve incluir durante a compilação
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "dom",               // Inclui as definições de tipos para a API DOM
+      "dom.iterable",      // Permite iteração de objetos no DOM
+      "esnext"             // Inclui as definições mais recentes do ECMAScript
     ],
-    "module": "esnext",
+
+    // Define o módulo a ser usado, no caso "esnext" (mais recente)
+    "module": "ESNext",
+
+    // Define a resolução de módulos como "node", o que é comum em projetos Node.js
     "moduleResolution": "node",
+
+    // Permite a interoperabilidade entre CommonJS e módulos ES
     "esModuleInterop": true,
+
+    // Permite a importação de módulos ES como se fossem módulos CommonJS
     "allowSyntheticDefaultImports": true,
+
+    // Habilita o modo estrito de verificação de tipos
     "strict": true,
+
+    // Garante que os nomes de arquivos sejam consistentes
     "forceConsistentCasingInFileNames": true,
+
+    // Garante que o TypeScript não permita o "fallthrough" (transição) entre cases no switch
     "noFallthroughCasesInSwitch": true,
+
+    // Permite a importação de arquivos JSON como módulos
     "resolveJsonModule": true,
+
+    // Garante que cada arquivo seja tratado como um módulo isolado
     "isolatedModules": true,
+
+    // Não gera arquivos de saída durante a compilação
     "noEmit": true,
+
+    // Preserve JSX ao invés de transpilá-lo diretamente para JavaScript
     "jsx": "preserve",
+
+    // Ignora verificações em bibliotecas externas para acelerar a compilação
     "skipLibCheck": true,
+
+    // Permite a utilização de arquivos JavaScript no projeto
     "allowJs": true,
+
+    // Habilita o modo incremental para melhorar o tempo de compilação
     "incremental": true,
-    "baseUrl":".",
+
+    // Define a pasta base para resolver módulos importados
+    "baseUrl": "src",
+
+    // Define os caminhos personalizados para os módulos importados
     "paths": {
-        "@/*": ["src/*"]
+      "@/*": ["*"]  // O alias "@" refere-se à pasta "src"
     },
+
+    // Define onde o TypeScript deve procurar definições de tipos
     "typeRoots": ["./node_modules/@types", "./src/types"]
   },
+
+  // Define os arquivos que o TypeScript deve incluir na compilação
   "include": [
-    "next-env.d.ts", "**/*.ts", "**/*.tsx", "src"
+    "next-env.d.ts",    // Inclui o arquivo de ambiente do Next.js
+    "**/*.ts",          // Inclui todos os arquivos TypeScript
+    "**/*.tsx",         // Inclui todos os arquivos TypeScript com JSX
+    "src"               // Inclui todos os arquivos dentro da pasta "src"
   ],
+
+  // Define os diretórios que o TypeScript deve excluir da compilação
   "exclude": [
-    "node_modules", ".next", "out", "build"
+    "node_modules",     // Exclui a pasta "node_modules"
+    ".next",            // Exclui a pasta ".next" (gerada pelo Next.js)
+    "out",              // Exclui a pasta "out" (gerada ao exportar o Next.js)
+    "build"             // Exclui a pasta "build" (caso exista)
   ]
 }

@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { NextPageWithLayout } from '@/types/nextPageWithLayout';
 import SimpleLayout from '@/layouts/SimpleLayout';
-import Logo from '../assets/Logo.png'
+import Logo from '@/assets/Logo.png'
 import Image from 'next/image';
 
 const LoginPage: NextPageWithLayout = () => {
