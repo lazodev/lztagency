@@ -6,7 +6,7 @@ type Props = {
 
 const SimpleLayout = ({ children }: Props) => {
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center">
+        <div className="justify-center items-center">
             <main className="flex-grow">
                 {children}
             </main>
